@@ -23,20 +23,20 @@ class CreateTripsTable extends Migration
             $table->integer('passanger');
             $table->timestamps();
 
-            //foreign key
-            $table->foreign('bus_id')
-                ->referencing('id')->on('busses')
-                ->onUpdate('cascade')->onDelete('cascade');
-            //foreign key
-            $table->foreign('town_from')
-                ->referencing('id')->on('towns')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-            //foriegn key
-            $table->foreign('town_to')
-                ->referencing('id')->on('towns')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
+            // //foreign key
+            // $table->foreign('bus_id')
+            //     ->referencing('id')->on('busses')
+            //     ->onUpdate('cascade')->onDelete('cascade');
+            // //foreign key
+            // $table->foreign('town_from')
+            //     ->referencing('id')->on('towns')
+            //     ->onUpdate('cascade')
+            //     ->onDelete('cascade');
+            // //foriegn key
+            // $table->foreign('town_to')
+            //     ->referencing('id')->on('towns')
+            //     ->onUpdate('cascade')
+            //     ->onDelete('cascade');
         });
     }
 

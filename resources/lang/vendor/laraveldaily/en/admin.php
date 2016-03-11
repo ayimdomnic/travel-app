@@ -5,7 +5,7 @@ return [
   'dashboard-title' => 'Welcome to your project dashboard',
 
   // partials-header
-  'partials-header-title' => 'Travel-app',
+  'partials-header-title' => 'QuickAdmin en',
 
   // partials-sidebar
   'partials-sidebar-menu' => 'Menu',
@@ -14,7 +14,7 @@ return [
   'partials-sidebar-logout' => 'Logout',
 
   // partials-topbar
-  'partials-topbar-title' => 'Travel-app',
+  'partials-topbar-title' => 'QuickAdmin en',
 
   // users-create
   'users-create-create_user' => 'Create user',
