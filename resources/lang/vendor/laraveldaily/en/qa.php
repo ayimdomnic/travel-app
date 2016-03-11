@@ -30,7 +30,7 @@ return [
   'menus-createCustom-create_new_custom_controller' => 'Create new custom controller',
   'menus-createCustom-menu_parent' => 'Menu parent',
   'menus-createCustom-controller_name' => 'Controller name',
-  'menus-createCustom-controller_name_placeholder' => 'ex. Books or Products (used to generate DB table and all back-end files)',
+  'menus-createCustom-controller_name_placeholder' => 'ex. Buses or companies (used to generate DB table and all back-end files)',
   'menus-createCustom-menu_title' =>  'Menu title',
   'menus-createCustom-menu_title_placeholder' => 'Menu title (used for menu item)',
   'menus-createCustom-roles' => 'Roles',

@@ -11,11 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::resource('pages', 'HomeController');
+Route::resource('/', 'HomeController');
 
 /*
 |--------------------------------------------------------------------------
