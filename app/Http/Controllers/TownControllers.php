@@ -15,7 +15,9 @@ class TownControllers extends Controller
      */
     public function index()
     {
-        //
+        $town = Town::all();
+
+        return view ('admin.towm.index');
     }
 
     /**

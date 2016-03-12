@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Passanger;
 
 class PassangersController extends Controller
 {
@@ -15,7 +16,9 @@ class PassangersController extends Controller
      */
     public function index()
     {
-        //
+        $passangers = Passanger::all();
+
+        return view ('admin.passangers.index');
     }
 
     /**

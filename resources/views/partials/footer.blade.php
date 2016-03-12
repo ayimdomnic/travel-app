@@ -91,7 +91,7 @@
                     <!-- END / WIDGET -->
                 </div>
                 <div class="copyright">
-                    <p>©2015 GOFAR travel™ All rights reserved.</p>
+                    <p>©2015 ayimdomnic travel-app™ All rights reserved.</p>
                 </div>
             </div>
         </footer>
