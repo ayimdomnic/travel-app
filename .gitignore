@@ -1,6 +1,6 @@
 /vendor
 /node_modules
-/.idea
-/nbproject
+/public/storage
+Homestead.yaml
+Homestead.json
 .env
-/public/uploads
