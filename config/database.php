@@ -55,7 +55,7 @@ return [
 		'mysql' => [
                     'driver'    => 'mysql',
                     'host'      => 'localhost',
-                    'database'  => 'bus_track',
+                    'database'  => 'homestead',
                     'username'  => 'root',
                     'password'  => '',
                     'charset'   => 'utf8',
