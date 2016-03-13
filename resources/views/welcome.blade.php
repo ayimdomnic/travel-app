@@ -1,112 +1,48 @@
-@extends('layouts.master')
+<html>
+	<head>
+		<title>Laravel</title>
+		
+		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
-@section('content')
-            <!-- HEADING PAGE -->
-        <section class="awe-parallax page-heading-demo">
-            <div class="awe-overlay"></div>
-            <div class="container text-center">
-                <div class="heading-content">
-                    <h2 class="text-uppercase">Travel in style</h2>
-                    <p>in my own style</p>
-                </div>
-            </div>
-        </section>
-        <!-- END / HEADING PAGE -->
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				color: #B0BEC5;
+				display: table;
+				font-weight: 100;
+				font-family: 'Lato';
+			}
 
+			.container {
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+			}
 
-        <!-- SEARCH TABS -->
-        <section>
-            <div class="container">
-                <div class="awe-search-tabs tabs">
-                    <ul>
-                        <li>
-                            <a href="#awe-search-tabs-4">
-                                <i class="awe-icon awe-icon-bus"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="awe-search-tabs__content tabs__content">
-                        <div id="awe-search-tabs-3" class="search-flight">
-                            <h2>Search Bus</h2>
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-elements">
-                                        <label>From</label>
-                                        <div class="form-item">
-                                            <i class="awe-icon awe-icon-marker-1"></i>
-                                            <input type="text" value="Ho Chi Minh, Hanoi, Vietnam">
-                                        </div>
-                                    </div>
-                                    <div class="form-elements">
-                                        <label>To</label>
-                                        <div class="form-item">
-                                            <i class="awe-icon awe-icon-marker-1"></i>
-                                            <input type="text" value="Ankara, Turkey">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-elements">
-                                        <label>Depart on</label>
-                                        <div class="form-item">
-                                            <i class="awe-icon awe-icon-calendar"></i>
-                                            <input type="text" class="awe-calendar" value="Check in">
-                                        </div>
-                                    </div>
-                                    <div class="form-elements">
-                                        <label>Return on</label>
-                                        <div class="form-item">
-                                            <i class="awe-icon awe-icon-calendar"></i>
-                                            <input type="text" class="awe-calendar" value="Check out">
-                                        </div>
-                                    </div>
-                                    <div class="form-elements">
-                                        <label>Adult</label>
-                                        <div class="form-item">
-                                            <select class="awe-select">
-                                                <option>0</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                            </select>
-                                        </div>
-                                        <span>12 yo and above</span>
-                                    </div>
-                                    <div class="form-elements">
-                                        <label>Kids</label>
-                                        <div class="form-item">
-                                            <select class="awe-select">
-                                                <option>0</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                            </select>
-                                        </div>
-                                        <span>0-11 yo</span>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-elements">
-                                        <label>Budget</label>
-                                        <div class="form-item">
-                                            <select class="awe-select">
-                                                <option>All types</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-actions">
-                                    <input type="submit" value="Find My Flight">
-                                </div>
-                            </form>
-                        </div>
+			.content {
+				text-align: center;
+				display: inline-block;
+			}
 
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END / SEARCH TABS -->
-@endsection
+			.title {
+				font-size: 96px;
+				margin-bottom: 40px;
+			}
+
+			.quote {
+				font-size: 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<div class="title">Laravel 5</div>
+				<div class="quote">{{ Inspiring::quote() }}</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,1 +1,1 @@
-{{ trans('quickadmin::emails.password-reset_your_password') }} {{ url('password/reset/'.$token) }}
+Click here to reset your password: {{ url('password/reset/'.$token) }}

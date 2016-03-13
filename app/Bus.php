@@ -1,30 +1,22 @@
-<?php
+<?php namespace App;
 
-namespace App;
-use App\Passanger,
-use App\Company;
 use Illuminate\Database\Eloquent\Model;
 
-class Bus extends Model
-{
-    protected $fillable = [
-    'registration_number',
-    'company_id',//everycompanies bus o
-    'bus_id',
-    'capacity',
-    'status',  
-    ];
+class Bus extends Model {
 
-    public function passanger(){
-    	return $this->hasMany(Passanger::class);
+	public function busOwner() {
+            return $this->belongsTo("App\BusOwner");
+        }
+        
+        public function busDeparturePoint() {
+            return $this->hasMany('App\BusDeparturePoint', 'buses_id');
+        }
+        
+        public function busDroppingPoint() {
+            return $this->hasMany('App\BusDroppingPoint', 'buses_id');
+        }
 
-    }
-    public function company(){
-    	return $this->belongsTo(Company::class);
-    }
-    public function trip(){
-    	return $this->hasMany(Trip::class);
-    }
+        public function bookingHistory() {
+            return $this->hasMany("App\BookingHistory", 'buses_id');
+        }
 }
-
-
