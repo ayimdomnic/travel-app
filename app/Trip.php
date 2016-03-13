@@ -22,10 +22,10 @@ class Trip extends Model
     ];
 
     public function bus(){
-    	return $this->hasmany(Bus::class);
+    	return $this->hasMany(Bus::class);
     }
     public function town(){
-    	return $this->belongsTo(Trip::class);
+    	return $this->belongsTo(Town::class);
     }
 
     public function passangers(){

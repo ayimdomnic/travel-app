@@ -83,6 +83,12 @@ class TownControllers extends Controller
      */
     public function destroy($id)
     {
-        //
+        $town = Town::find($id);
+
+        $town->delete();
+
+        Session::flash('flash_message','Your Town has been deleted');
+
+        return redirect()->back();
     }
 }

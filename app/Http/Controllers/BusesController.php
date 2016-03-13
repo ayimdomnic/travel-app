@@ -8,6 +8,9 @@ use App\Http\Requests;
 
 class BusesController extends Controller
 {
+    // private function __construct(){
+    //     $buses
+    // }
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +18,8 @@ class BusesController extends Controller
      */
     public function index()
     {
-        //
+        $buses = Bus::all();
+        return view ('admin.buses.index');
     }
 
     /**
@@ -25,7 +29,7 @@ class BusesController extends Controller
      */
     public function create()
     {
-        //
+        return view ('admin.buses.create');
     }
 
     /**
@@ -36,7 +40,13 @@ class BusesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $buses = new Order($request->all());
+
+        $buses->save();
+
+        Session::flash('flash_message','You have sucessfully added a bus!');
+
+        return view('admin.buses.index');
     }
 
     /**

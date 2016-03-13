@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Trip;
 
 use App\Http\Requests;
-use App\Company;
 
-class CompaniesController extends Controller
+class TripsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,7 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        $companies = Company::all();
-
-        return view ('admin.companies.index');
+        //
     }
 
     /**
@@ -28,7 +26,7 @@ class CompaniesController extends Controller
      */
     public function create()
     {
-        return view ('admin.companies.create')
+        //
     }
 
     /**
@@ -39,13 +37,7 @@ class CompaniesController extends Controller
      */
     public function store(Request $request)
     {
-        $company = new Company($request->all());
-
-        $company->save();
-
-        Session::flash('flash_message','Your company has been added');
-
-        return view('admin.companies.index');
+        //
     }
 
     /**
@@ -90,12 +82,6 @@ class CompaniesController extends Controller
      */
     public function destroy($id)
     {
-        $company = Company::find($id);
-
-        $company->delete();
-
-        Session::flash('flash_message','Your company has been deleted');
-
-        return redirect()->back();
+        //
     }
 }
