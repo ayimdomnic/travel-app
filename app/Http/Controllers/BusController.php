@@ -22,25 +22,6 @@ class BusController extends Controller {
         }
 
     
-        /**
-         * Method is used to add bus owner details
-         * One user/owner have ony one details in db
-         * URL: api/v1.0/add/bus/owner
-         * payload:
-        {
-                "params": {
-                        "name_of_the_travels": "Swapna",
-                        "owner_name": "Trivedi",
-                        "phone_number_one": 9987899879,
-                        "phone_number_two": 838383833,
-                        "street": "BOC Para",
-                        "city": "Dharmanagar",
-                        "pincode": "799250",
-                        "state": "Tripura",
-                        "country": "India"
-                }
-        }
-         */
         public function addBusOwner(){
                 $response = $this->response;
                 $data = Input::json()->all();
@@ -147,26 +128,7 @@ class BusController extends Controller {
          */
         
         
-        /**
-         * Used to add bus details
-         * URL: api/v1.0/add/bus/details
-        {
-                "params": {
-                        "bus_name": "Alqueda",
-                        "bus_from": "Guwahati",
-                        "from_place_id": "33",
-                        "bus_to": "Dharmanagar",
-                        "to_place_id": "11",
-                        "bus_type": "Hollow",
-                        "bus_comfort": "Sleeepr",
-                        "bus_seat_image_location": "/here/asd.jpg",
-                        "bus_total_seats": 40,
-                        "travelling_days": "Sunday, Monday, Saturday",
-                        "online_booking_seats": "1,2,3",
-                        "is_full_bus": "false"
-                }
-        }
-         */
+        
         public function addBusDetails(){
                 $response = $this->response;
                 $data = Input::json()->all();
@@ -302,20 +264,6 @@ class BusController extends Controller {
          */
         
         
-        /**
-         * Used to add dropping details
-         * URL: api/v1.0/add/bus/destination
-         * payload:
-        {
-                "params": {
-                        "buses_id": "44",
-                        "bus_departure_points_id": "9",
-                        "dropping_point": "Dewmalis",
-                        "dropping_time": "93pm",
-                        "price": "123"
-                }
-        }
-         */
         public function addDroppingPointDetails() {
             $response = $this->response;
             $data = Input::json()->all();
@@ -458,35 +406,7 @@ class BusController extends Controller {
             }
             return $response->errorResponse("data_not_saved");
         }
-        /**
-         * Returns:
-        {
-            "error": false,
-            "code": 200,
-            "message": "Dropping details has been added successfully",
-            "info": {
-                "buses_id": "44",
-                "bus_departure_points_id": "9",
-                "dropping_point": "Dewmalis",
-                "dropping_time": "93pm",
-                "price": "123"
-            }
-        }
-         */
         
-        
-        /**
-         * Used to add departure details
-         * URL: /api/v1.0/add/bus/departure
-         * payloads
-        {
-               "params": {
-                       "buses_id": 27,
-                       "departure_from": "Paltan Bazar",
-                       "departure_time": "9:20pm"
-               }
-        }
-         */
         public function addDepartureDetails() {
             $response = $this->response;
             $data = Input::json()->all();
@@ -563,18 +483,6 @@ class BusController extends Controller {
             }
             return $response->errorResponse("data_not_saved");
         }
-        /**
-         * Returns:
-        {
-            "error": false,
-            "code": 200,
-            "message": "Departure details has been added successfully",
-            "info": {
-                "buses_id": 44,
-                "bus_departure_point_id": 9
-            }
-        }
-         */
         
         
         /**
@@ -758,25 +666,7 @@ class BusController extends Controller {
             return $response->successResponse(200, "Dropping details of Bus id: " . $bus_id, $dropping_details);
         }
         
-        /**
-         * This method is used to update the bu owner details
-         * URL: /public/api/v1.0/update/bus/owner/{user_id}
-         * payloads:
-            {
-                    "params": {
-                            "name_of_the_travels": "Dilwale",
-                            "owner_name": "Sharru",
-                            "phone_number_one": 99938355,
-                            "phone_number_two": 838383833,
-                            "street": "BOC",
-                            "city": "Dharmagar",
-                            "pincode": "797250",
-                            "state": "Tripra",
-                            "country": "India"
-                    }
-            }
-         * @param Request $request
-         */
+        
         public function updateBusOwner(Request $request) {
             $response = $this->response;
             $validateAndHandleError = new ValidateAndHandleError();
@@ -896,38 +786,7 @@ class BusController extends Controller {
                 }
                 return $response->errorResponse("update_unsuccessfull");
         }
-        /**
-         * Returns
-            {
-                "error": false,
-                "code": 200,
-                "message": "Bus owner details updated successully",
-                "info": {
-                    "user_id": 1
-                }
-            }
-         */
         
-        /**
-         * Used to update bus details
-         * URL: /public/api/v1.0/update/bus/details/{bus_id}
-        {
-            "params": {
-              "bus_name": "Tarapop",
-              "bus_from": "Aachara",
-              "from_place_id" : 2,
-              "bus_to": "Aahor",
-              "to_place_id": 5,
-              "bus_type": "Hollow",
-              "bus_comfort": "Sleeepr",
-              "bus_seat_image_location": "/here/asd.jpg",
-              "bus_total_seats": "44",
-              "online_booking_seats": "",
-              "is_full_bus": true,
-                  "travelling_days": "sunday, monday"
-            }
-          }
-         */
         public function updateBusDetails (Request $request) {
             $response = $this->response;
             $validateAndHandleError = new ValidateAndHandleError();
@@ -1070,31 +929,7 @@ class BusController extends Controller {
             }
             return $response->errorResponse("update_unsuccessfull");
         }
-        /**
-         * Returns:
-        {
-            "error": false,
-            "code": 200,
-            "message": "Bus details has been updated successully",
-            "info": {
-                "bus_id": "27",
-                "bus_owners_id": 4
-            }
-        }
-         */
         
-        
-        /**
-         * Used to update departure details
-        {
-                "params": {
-                        "buses_id":44,
-                        "departure_from": "Paltan Bazar",
-                        "departure_time": "9:20pm"
-                }
-        }
-         * URL: /public/api/v1.0/update/bus/departure/{departure_id}
-         */
         public function updateDepartureDetails(Request $request){
             $data = Input::json()->all();
             $response = $this->response;
@@ -1187,38 +1022,7 @@ class BusController extends Controller {
             return $response->errorResponse("update_unsuccessfull");
             
         }
-        /**
-         * Returns:
-        {
-            "error": false,
-            "code": 200,
-            "message": "Bus departure details has been updated successully",
-            "info": {
-                "bus_id": 27,
-                "bus_owners_id": 4,
-                "departure_id": "6",
-                "departure_from": "Paltan Bazar",
-                "departure_time": "9:20pm"
-            }
-        }
-         */
         
-        
-        /**
-         * Url:
-         * /public/api/v1.0/update/bus/destination/{dropping_id}
-         * 
-         * Payload:
-            {
-                "params": {
-                    "buses_id": 27,
-                    "bus_departure_points_id": 5,
-                    "dropping_point": "Tada",
-                    "dropping_time": "9am",
-                    "price": "1003"
-                }
-            }
-         */
         public function updateDroppingDetails(Request $request){
             $data = Input::json()->all();
             $response = $this->response;
@@ -1348,21 +1152,5 @@ class BusController extends Controller {
             
         }
         
-        /**
-         * Returns: 
-        {
-            "error": false,
-            "code": 200,
-            "message": "Bus dropping details has been updated successully",
-            "info": {
-                "bus_dropping_id": "15",
-                "bus_id": 27,
-                "bus_owners_id": 4,
-                "departure_id": 5,
-                "dropping_point": "Tada",
-                "dropping_time": "9am",
-                "price": "1003"
-            }
-        }
-         */
+        
 }
